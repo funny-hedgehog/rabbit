@@ -1,10 +1,17 @@
+import React from 'react';
+import { IonApp, IonHeader, IonToolbar, IonTitle } from '@ionic/react';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      HHHHHH
-    </div>
+    <IonApp>
+      <h1>HHHHHH</h1>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Inbox</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+    </IonApp>
   );
 }
 
