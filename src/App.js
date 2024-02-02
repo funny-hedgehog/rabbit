@@ -1,29 +1,28 @@
 import React from 'react';
-import { IonApp, IonHeader, IonToolbar, IonTitle, IonButton } from '@ionic/react';
-import * as Portals from '@ionic/portals';
+import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
+import { Redirect, Route } from 'react-router';
 import './App.css';
+import HomePage from "./pages/HomePage";
+import HelpPage from "./pages/HelpPage";
+import {first} from "./test1";
+import {second} from "./test2";
+import {third} from "./test3";
 
 function App() { // { context }
+  React.useEffect(() => {
+    first()
+    second()
+    third()
+  }, [])
+
   return (
     <IonApp>
-      <h1>HHHHHH</h1>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Inbox</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonButton
-        className="checkout-button"
-        expand="block"
-        onClick={() => {
-          Portals.publish({ topic: 'showCheckout' });
-        }}
-      >
-        Checkout
-      </IonButton>
+      <IonReactRouter>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/help" exact component={HelpPage} />
+      </IonReactRouter>
     </IonApp>
-
-
   );
 }
 

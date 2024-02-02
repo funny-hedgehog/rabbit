@@ -1,1 +1,3 @@
-console.log(1111111)
+export function first() {
+  console.log(1111111)
+}

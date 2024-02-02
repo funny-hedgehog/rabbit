@@ -1,1 +1,3 @@
-console.log(222222)
+export function second() {
+  console.log(222222)
+}
