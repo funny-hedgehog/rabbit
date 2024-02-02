@@ -1,0 +1,6 @@
+{
+  "appId": "io.ionic.portals.rabbit",
+  "appName": "rabbit",
+  "webDir": "build",
+  "bundledWebRuntime": false
+}
